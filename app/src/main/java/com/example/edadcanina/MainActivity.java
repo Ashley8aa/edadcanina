@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
                     int reultado = edadint * 7;
                     String resultadostring = "La edad de tu perrito es: " + reultado + " años";
                     resulttext.setText(resultadostring);
+                } else {
+                    Toast.makeText(MainActivity.this, "Se debe capturar edad", Toast.LENGTH_LONG) .show();
+
                 }
 
             }
