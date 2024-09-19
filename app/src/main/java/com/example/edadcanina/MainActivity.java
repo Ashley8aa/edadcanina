@@ -28,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String edad = edadedit.getText().toString();
-                int edadint = Integer.parseInt(edad);
-                int reultado = edadint * 7;
-                String resultadostring = "La edad de tu perrito es: " + reultado + " años";
-                resulttext.setText(resultadostring);
+
+                if (!edad.isEmpty()) {
+                    int edadint = Integer.parseInt(edad);
+                    int reultado = edadint * 7;
+                    String resultadostring = "La edad de tu perrito es: " + reultado + " años";
+                    resulttext.setText(resultadostring);
+                }
+
             }
 
 
